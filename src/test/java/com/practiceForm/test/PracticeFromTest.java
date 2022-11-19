@@ -31,7 +31,7 @@ public class PracticeFromTest extends ConfigMain {
 
             new PracticeModalFromPage()
                     .modalContentVerify(PracticeFormData.MODAL_FORM_TITLE)
-                    .modalBodyTextVerifyResults(
+                    .modalFormTableTextVerifyResults(
                             PracticeFormData.FIRST_NAME,
                             PracticeFormData.LAST_NAME,
                             PracticeFormData.EMAIL,

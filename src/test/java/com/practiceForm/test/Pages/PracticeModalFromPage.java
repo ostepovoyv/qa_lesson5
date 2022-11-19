@@ -26,20 +26,20 @@ public class PracticeModalFromPage {
         modalTable.find(byText(label)).parent().shouldHave(text(value));
     }
 
-    public PracticeModalFromPage modalBodyTextVerifyResults(String firstName,
-                                                            String lastName,
-                                                            String email,
-                                                            String gender,
-                                                            String phoneNumber,
-                                                            String dateOfBirthDay,
-                                                            String dateOfBirthMonth,
-                                                            String dateOfBirthYear,
-                                                            String subject,
-                                                            String hobbies,
-                                                            String pictureName,
-                                                            String currentAdress,
-                                                            String state,
-                                                            String city){
+    public PracticeModalFromPage modalFormTableTextVerifyResults(String firstName,
+                                                                 String lastName,
+                                                                 String email,
+                                                                 String gender,
+                                                                 String phoneNumber,
+                                                                 String dateOfBirthDay,
+                                                                 String dateOfBirthMonth,
+                                                                 String dateOfBirthYear,
+                                                                 String subject,
+                                                                 String hobbies,
+                                                                 String pictureName,
+                                                                 String currentAdress,
+                                                                 String state,
+                                                                 String city){
         modalBody.shouldHave(
                 text("Label"),
                 text("Values"));
