@@ -1,7 +1,7 @@
-package com.practiceForm.test.Pages;
+package com.practiceForm.test.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import com.practiceForm.test.Components.CalendarComponent;
+import com.practiceForm.test.components.CalendarComponent;
 
 import java.io.File;
 
@@ -80,7 +80,7 @@ public class PracticeFromPage {
         return this;
     }
 
-    public PracticeFromPage pictureLoad(String path, String pictureName) {
+    public PracticeFromPage uploadPicture(String path, String pictureName) {
         pictureLoader.uploadFile(new File(path + pictureName));
         return this;
     }
@@ -98,7 +98,7 @@ public class PracticeFromPage {
         return this;
     }
 
-    public PracticeFromPage submitButtonClick() {
+    public PracticeFromPage clickSubmitButton() {
         submitButton.click();
         return this;
     }

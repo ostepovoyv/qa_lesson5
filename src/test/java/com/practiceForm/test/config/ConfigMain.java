@@ -1,8 +1,8 @@
-package com.practiceForm.test.Config;
+package com.practiceForm.test.config;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
-import com.practiceForm.test.TestData.PracticeFormData;
+import com.practiceForm.test.testData.PracticeFormData;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 

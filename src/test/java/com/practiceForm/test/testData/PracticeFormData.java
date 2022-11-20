@@ -1,4 +1,4 @@
-package com.practiceForm.test.TestData;
+package com.practiceForm.test.testData;
 
 public abstract class PracticeFormData {
     public static final String BASE_URL = "https://demoqa.com";
