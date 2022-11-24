@@ -27,25 +27,19 @@ public class PracticeModalFromPage {
         modalTable.find(byText(label)).parent().shouldHave(text(value));
     }
 
-    public PracticeModalFromPage verifyModalFormTableResults(){
-
+    public PracticeModalFromPage verifymodalBody(){
         modalBody.shouldHave(
                 text("Label"),
                 text("Values"));
+        return this;
+    }
 
-        verifyLabelWithValues("Student Name",PracticeFormData.FIRST_NAME + " " + PracticeFormData.LAST_NAME);
-        verifyLabelWithValues("Student Email",PracticeFormData.EMAIL);
-        verifyLabelWithValues("Gender",PracticeFormData.GENDER);
-        verifyLabelWithValues("Mobile",PracticeFormData.PHONE_NUMBER);
-        verifyLabelWithValues("Date of Birth",PracticeFormData.DATE_OF_BIRTH_DAY + " "
-                                                        + PracticeFormData.DATE_OF_BIRTH_MONTH + ","
-                                                        + PracticeFormData.DATE_OF_BIRTH_YEAR);
-        verifyLabelWithValues("Subjects",PracticeFormData.SUBJECT);
-        verifyLabelWithValues("Hobbies",PracticeFormData.HOBBIES);
-        verifyLabelWithValues("Picture",PracticeFormData.PICTURE_NAME);
-        verifyLabelWithValues("Address",PracticeFormData.CURRENT_ADDRESS);
-        verifyLabelWithValues("State and City",PracticeFormData.STATE + " " + PracticeFormData.CITY);
+    public PracticeModalFromPage verifyModalFormTableResults(String label, String values){
+        verifyLabelWithValues(label,values);
+        return this;
+    }
 
+    public PracticeModalFromPage verifyModalFooter(){
         modalFooter.find("#closeLargeModal").shouldHave(text("Close")).click();
         return this;
     }

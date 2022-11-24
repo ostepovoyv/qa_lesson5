@@ -13,7 +13,7 @@ public class ConfigMain {
         Configuration.browserSize = "1920x1080";
         Configuration.pageLoadTimeout = 100000;
 //        Configuration.browser= "firefox";
-        Configuration.baseUrl= PracticeFormData.BASE_URL;
+        Configuration.baseUrl= PracticeFormData.baseUrl;
 //        Configuration.holdBrowserOpen = true;
     }
 

@@ -11,26 +11,39 @@ public class PracticeFromTest extends ConfigMain {
     @Test
     public void practiceFromTest() {
             new PracticeFromPage()
-                    .openPracticeFrom(PracticeFormData.PRACTICE_FORM_TITLE_TEXT)
-                    .setFirstName(PracticeFormData.FIRST_NAME)
-                    .setLastName(PracticeFormData.LAST_NAME)
-                    .setEmail(PracticeFormData.EMAIL)
-                    .setGender(PracticeFormData.GENDER)
-                    .setUserNumber(PracticeFormData.PHONE_NUMBER)
-                    .setDateOfBirth(PracticeFormData.DATE_OF_BIRTH_MONTH,
-                                    PracticeFormData.DATE_OF_BIRTH_YEAR,
-                                    PracticeFormData.DATE_OF_BIRTH_DAY)
-                    .setSubjects(PracticeFormData.SUBJECT)
-                    .setHobbies(PracticeFormData.HOBBIES)
-                    .uploadPicture(PracticeFormData.PICTURE_PATH,
-                                 PracticeFormData.PICTURE_NAME)
-                    .setCurrentAddress(PracticeFormData.CURRENT_ADDRESS)
-                    .setStateAndCity(PracticeFormData.STATE,
-                                     PracticeFormData.CITY)
+                    .openPracticeFrom(PracticeFormData.practiceFormTitleText)
+                    .setFirstName(PracticeFormData.firstName)
+                    .setLastName(PracticeFormData.lastName)
+                    .setEmail(PracticeFormData.email)
+                    .setGender(PracticeFormData.gender)
+                    .setUserNumber(PracticeFormData.phoneNumber)
+                    .setDateOfBirth(PracticeFormData.dateOfBirthMonth,
+                                    PracticeFormData.dateOfBirthYear,
+                                    PracticeFormData.dateOfBirthDay)
+                    .setSubjects(PracticeFormData.subject)
+                    .setHobbies(PracticeFormData.hobbies)
+                    .uploadPicture(PracticeFormData.picturePath,
+                                   PracticeFormData.pictureName)
+                    .setCurrentAddress(PracticeFormData.currentAddress)
+                    .setStateAndCity(PracticeFormData.state,
+                                     PracticeFormData.city)
                     .clickSubmitButton();
 
             new PracticeModalFromPage()
-                    .verifyModalContent(PracticeFormData.MODAL_FORM_TITLE)
-                    .verifyModalFormTableResults();
+                    .verifyModalContent(PracticeFormData.modalFormTitle)
+                    .verifymodalBody()
+                    .verifyModalFormTableResults("Student Name",PracticeFormData.firstName + " " + PracticeFormData.lastName)
+                    .verifyModalFormTableResults("Student Email", PracticeFormData.email)
+                    .verifyModalFormTableResults("Gender", PracticeFormData.gender)
+                    .verifyModalFormTableResults("Mobile", PracticeFormData.phoneNumber)
+                    .verifyModalFormTableResults("Date of Birth",PracticeFormData.dateOfBirthDay + " "
+                                                                     + PracticeFormData.dateOfBirthMonth + ","
+                                                                     + PracticeFormData.dateOfBirthYear)
+                    .verifyModalFormTableResults("Subjects", PracticeFormData.subject)
+                    .verifyModalFormTableResults("Hobbies", PracticeFormData.hobbies)
+                    .verifyModalFormTableResults("Picture", PracticeFormData.pictureName)
+                    .verifyModalFormTableResults("Address", PracticeFormData.currentAddress)
+                    .verifyModalFormTableResults("State and City",PracticeFormData.state + " " + PracticeFormData.city)
+                    .verifyModalFooter();
     }
 }
