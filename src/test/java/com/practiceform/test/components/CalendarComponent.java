@@ -1,4 +1,4 @@
-package com.practiceForm.test.components;
+package com.practiceform.test.components;
 
 import com.codeborne.selenide.SelenideElement;
 

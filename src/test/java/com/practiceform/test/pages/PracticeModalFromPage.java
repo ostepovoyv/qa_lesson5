@@ -1,8 +1,8 @@
-package com.practiceForm.test.pages;
+package com.practiceform.test.pages;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-import com.practiceForm.test.testData.PracticeFormData;
+import com.practiceform.test.testdata.PracticeFormData;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;

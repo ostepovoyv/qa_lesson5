@@ -1,7 +1,7 @@
-package com.practiceForm.test.pages;
+package com.practiceform.test.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import com.practiceForm.test.components.CalendarComponent;
+import com.practiceform.test.components.CalendarComponent;
 
 import java.io.File;
 

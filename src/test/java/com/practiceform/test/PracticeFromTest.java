@@ -1,9 +1,9 @@
-package com.practiceForm.test;
+package com.practiceform.test;
 
-import com.practiceForm.test.config.ConfigMain;
-import com.practiceForm.test.pages.PracticeFromPage;
-import com.practiceForm.test.pages.PracticeModalFromPage;
-import com.practiceForm.test.testData.PracticeFormData;
+import com.practiceform.test.config.ConfigMain;
+import com.practiceform.test.pages.PracticeFromPage;
+import com.practiceform.test.pages.PracticeModalFromPage;
+import com.practiceform.test.testdata.PracticeFormData;
 import org.junit.jupiter.api.Test;
 
 public class PracticeFromTest extends ConfigMain {
