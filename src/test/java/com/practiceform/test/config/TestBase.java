@@ -6,7 +6,7 @@ import com.practiceform.test.testdata.PracticeFormData;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 
-public class ConfigMain {
+public class TestBase {
 
     @BeforeAll
     public static void setUpMain(){
