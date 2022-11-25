@@ -1,16 +1,16 @@
 package com.practiceform.test;
 
 import com.practiceform.test.config.TestBase;
-import com.practiceform.test.pages.PracticeFromPage;
-import com.practiceform.test.pages.PracticeModalFromPage;
+import com.practiceform.test.pages.PracticeFormPage;
+import com.practiceform.test.pages.PracticeModalFormPage;
 import com.practiceform.test.testdata.PracticeFormData;
 import org.junit.jupiter.api.Test;
 
-public class PracticeFromTest extends TestBase {
+public class PracticeFormTest extends TestBase {
 
     @Test
     public void practiceFromTest() {
-            new PracticeFromPage()
+            new PracticeFormPage()
                     .openPracticeFrom(PracticeFormData.practiceFormTitleText)
                     .setFirstName(PracticeFormData.firstName)
                     .setLastName(PracticeFormData.lastName)
@@ -29,7 +29,7 @@ public class PracticeFromTest extends TestBase {
                                      PracticeFormData.city)
                     .clickSubmitButton();
 
-            new PracticeModalFromPage()
+            new PracticeModalFormPage()
                     .verifyModalContent(PracticeFormData.modalFormTitle)
                     .verifymodalBody()
                     .verifyModalFormTableResults("Student Name",PracticeFormData.firstName + " " + PracticeFormData.lastName)
