@@ -2,6 +2,7 @@ package com.practiceform.test.pages;
 
 import com.codeborne.selenide.SelenideElement;
 import com.practiceform.test.components.CalendarComponent;
+import io.qameta.allure.Step;
 
 import java.io.File;
 
@@ -31,6 +32,7 @@ public class PracticeFormPage {
             cityWrapper = $("#stateCity-wrapper"),
             submitButton = $("#submit");
 
+    @Step("открываем форму {value}")
     public PracticeFormPage openPracticeFrom(String value){
         open("/automation-practice-form");
         formTitle.shouldHave(text(value));
