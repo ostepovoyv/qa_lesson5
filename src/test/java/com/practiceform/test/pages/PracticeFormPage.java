@@ -32,7 +32,7 @@ public class PracticeFormPage {
             cityWrapper = $("#stateCity-wrapper"),
             submitButton = $("#submit");
 
-    @Step("открываем форму {value}")
+    @Step("Открываем форму {value}")
     public PracticeFormPage openPracticeFrom(String value){
         open("/automation-practice-form");
         formTitle.shouldHave(text(value));
