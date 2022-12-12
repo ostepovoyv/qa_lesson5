@@ -40,10 +40,11 @@ public class TestBase {
         Attach.pageSource();
         Attach.browserConsoleLogs();
         Attach.addVideo();
+        Selenide.closeWebDriver();
     }
 
     @AfterAll
     public static void afterAllTest(){
-        Selenide.closeWebDriver();
+
     }
 }
