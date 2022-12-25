@@ -53,7 +53,6 @@ public class PracticeFormTest extends TestBase {
                     .verifyModalFormTableResults("Address", PracticeFormData.currentAddress)
                     .verifyModalFormTableResults("State and City", PracticeFormData.state + " " + PracticeFormData.city)
                     .verifyModalFooter();
-
         });
     }
 }

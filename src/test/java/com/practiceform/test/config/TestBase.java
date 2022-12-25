@@ -16,12 +16,12 @@ public class TestBase {
 
     @BeforeAll
     public static void setUpMain(){
-        Configuration.browserSize = "1920x1080";
+        Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.pageLoadTimeout = 100000;
-//        Configuration.browser= "firefox";
+        Configuration.browser= System.getProperty("browser", "chrome");
         Configuration.baseUrl= PracticeFormData.baseUrl;
 //        Configuration.holdBrowserOpen = true;
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        Configuration.remote = System.getProperty("remoteUrl", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
