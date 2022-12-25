@@ -16,18 +16,19 @@ public class TestBase {
 
     @BeforeAll
     public static void setUpMain(){
-        Configuration.browserSize = System.getProperty("browser_size", "1920x1080");
+        Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.pageLoadTimeout = 100000;
         Configuration.browser = System.getProperty("browser", "chrome");
-        Configuration.browserVersion = System.getProperty("browser_version", "100");
+        Configuration.browserVersion = System.getProperty("browserVersion", "100");
         Configuration.baseUrl= PracticeFormData.baseUrl;
 //        Configuration.holdBrowserOpen = true;
-        Configuration.remote = System.getProperty("remote_url", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
+        Configuration.remote = System.getProperty("remoteUrl", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
+
     }
 
     @BeforeEach
