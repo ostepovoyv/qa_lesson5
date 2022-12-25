@@ -18,7 +18,7 @@ public class TestBase {
     public static void setUpMain(){
         Configuration.browserSize = System.getProperty("browser_size", "1920x1080");
         Configuration.pageLoadTimeout = 100000;
-        Configuration.browser= System.getProperty("browser", "chrome");
+        Configuration.browser= System.getProperty("browser", "chrome 100.8");
         Configuration.baseUrl= PracticeFormData.baseUrl;
 //        Configuration.holdBrowserOpen = true;
         Configuration.remote = System.getProperty("remote_url", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
